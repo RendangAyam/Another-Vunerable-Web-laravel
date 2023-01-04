@@ -40,7 +40,7 @@
         </li> --}}
         <li>
           <div class="space-y-6">
-            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="{{ secure_asset('img/Andrew.jpg'); }}" alt="">
+            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="{{ asset('img/Andrew.jpg'); }}" alt="">
             <div class="space-y-2">
               <div class="text-lg leading-6 font-medium space-y-1">
                 <h3>Andrew Christian Widjojo</h3>
@@ -68,7 +68,7 @@
         </li>
         <li>
           <div class="space-y-6">
-            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="{{ secure_asset('img/dennis.jpg'); }}" alt="">
+            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="{{ asset('img/dennis.jpg'); }}" alt="">
             <div class="space-y-2">
               <div class="text-lg leading-6 font-medium space-y-1">
                 <h3>Dennis</h3>
@@ -96,7 +96,7 @@
         </li>
         <li>
           <div class="space-y-6">
-            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="{{ secure_asset('img/vanessa.jpg'); }}" alt="">
+            <img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="{{ asset('img/vanessa.jpg'); }}" alt="">
             <div class="space-y-2">
               <div class="text-lg leading-6 font-medium space-y-1">
                 <h3>Vanessa Ratana Yoe</h3>

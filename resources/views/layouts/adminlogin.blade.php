@@ -8,7 +8,6 @@
         {{-- @endif --}}
         <meta name="referrer" content="no-referrer" />
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
-        <link href="{{ secure_asset('css/card.css'); }}" rel="stylesheet">
         {{-- <link href="{{ asset('css/card.css'); }}" rel="stylesheet"> --}}
     </head>
     <body>
