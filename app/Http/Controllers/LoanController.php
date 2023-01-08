@@ -128,8 +128,8 @@ class LoanController extends Controller
 
     public function listloan( $cardnumber )
     {
-        $list = loan::select('id','nominal','totalpayment','monthlypayment','installment','status','created_at')->where('cardnumber', $cardnumber)->get();
-        // $list = DB::select('SELECT `id`,nominal,totalpayment,monthlypayment,installment,`status`,created_at FROM loans WHERE cardnumber = '.$cardnumber);
+        // $list = loan::select('id','nominal','totalpayment','monthlypayment','installment','status','created_at')->where('cardnumber', $cardnumber)->get();
+        $list = DB::select('SELECT `id`,nominal,totalpayment,monthlypayment,installment,`status`,created_at FROM loans WHERE cardnumber = '.$cardnumber);
         // dd($list);
         return view('loan.listloan', ['list'=>$list]);
     }
