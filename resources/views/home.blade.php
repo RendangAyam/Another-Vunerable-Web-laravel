@@ -3,8 +3,7 @@
 @section('content')
 <div class="py-6">
   <div class="relative">
-    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
-    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-6xl min-h-4xl mx-auto sm:px-6 lg:px-8">
       <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
         <div class="absolute inset-0">
           <img class="h-full w-full object-cover" src="{{ asset('img/card.jpg') }}" alt="People working on laptops">
