@@ -33,22 +33,22 @@ class DatabaseSeeder extends Seeder
             'money' => 101000000,
         ]);
         debittransaction::create([
-            'srccard' => '2200000000000001',
-            'destcard' => '2200000000000002',
+            'srccard' => date("y").'00000000000001',
+            'destcard' => date("y").'00000000000002',
             'nominal' => 100000,
         ]);
         debittransaction::create([
-            'srccard' => '2200000000000001',
-            'destcard' => '2200000000000003',
+            'srccard' => date("y").'00000000000001',
+            'destcard' => date("y").'00000000000003',
             'nominal' => 200000,
         ]);
         debittransaction::create([
-            'srccard' => '2200000000000001',
-            'destcard' => '2200000000000002',
+            'srccard' => date("y").'00000000000001',
+            'destcard' => date("y").'00000000000002',
             'nominal' => 500000,
         ]);
         loan::create([
-            'cardnumber' => '2200000000000001',
+            'cardnumber' => date("y").'00000000000001',
             'nominal' => 2500000,
             'totalpayment' => 2550000,
             'monthlypayment' => 212500,
@@ -69,19 +69,27 @@ class DatabaseSeeder extends Seeder
             'money' => 102000000,
         ]);
         debittransaction::create([
-            'srccard' => '2200000000000002',
-            'destcard' => '2200000000000001',
+            'srccard' => date("y").'00000000000002',
+            'destcard' => date("y").'00000000000001',
             'nominal' => 110000,
         ]);
         debittransaction::create([
-            'srccard' => '2200000000000002',
-            'destcard' => '2200000000000003',
+            'srccard' => date("y").'00000000000002',
+            'destcard' => date("y").'00000000000003',
             'nominal' => 220000,
         ]);
         debittransaction::create([
-            'srccard' => '2200000000000002',
-            'destcard' => '2200000000000003',
+            'srccard' => date("y").'00000000000002',
+            'destcard' => date("y").'00000000000003',
             'nominal' => 50000,
+        ]);
+        loan::create([
+            'cardnumber' => date("y").'00000000000002',
+            'nominal' => 3000000,
+            'totalpayment' => 3060000,
+            'monthlypayment' => 225000,
+            'installment' => 12,
+            'status' => 'Waiting Aproval',
         ]);
         User::create([
             'nik' => '0000000000000003',
@@ -97,19 +105,27 @@ class DatabaseSeeder extends Seeder
             'money' => 103000000,
         ]);
         debittransaction::create([
-            'srccard' => '2200000000000003',
-            'destcard' => '2200000000000001',
+            'srccard' => date("y").'00000000000003',
+            'destcard' => date("y").'00000000000001',
             'nominal' => 111000,
         ]);
         debittransaction::create([
-            'srccard' => '2200000000000003',
-            'destcard' => '2200000000000002',
+            'srccard' => date("y").'00000000000003',
+            'destcard' => date("y").'00000000000002',
             'nominal' => 225000,
         ]);
         debittransaction::create([
-            'srccard' => '2200000000000003',
-            'destcard' => '2200000000000001',
+            'srccard' => date("y").'00000000000003',
+            'destcard' => date("y").'00000000000001',
             'nominal' => 50000,
+        ]);
+        loan::create([
+            'cardnumber' => date("y").'00000000000003',
+            'nominal' => 3000000,
+            'totalpayment' => 3060000,
+            'monthlypayment' => 225000,
+            'installment' => 12,
+            'status' => 'Waiting Aproval',
         ]);
         User::create([
             'nik' => 'admin',
