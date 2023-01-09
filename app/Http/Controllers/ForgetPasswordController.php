@@ -47,7 +47,7 @@ class ForgetPasswordController extends Controller
         Mail::to($request->email)->send(new OTPSend($details));
         echo $str;
 
-        
+        Session::flash('message', 'Link already sended to your email. Please check your email to reset your password');
         return redirect('forgotpassword');
     }
 
