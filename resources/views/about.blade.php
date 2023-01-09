@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="bg-white">
+<div class="min-h-screen bg-white">
   <div class="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8 lg:pb-24">
     <div class="space-y-12">
       <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">

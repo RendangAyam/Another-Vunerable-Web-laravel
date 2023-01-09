@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="py-6">
+<div class="min-h-screen py-6">
   <div class="relative">
     <div class="max-w-6xl min-h-4xl mx-auto sm:px-6 lg:px-8">
       <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
