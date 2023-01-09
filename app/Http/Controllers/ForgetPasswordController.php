@@ -27,7 +27,12 @@ class ForgetPasswordController extends Controller
         $str = strtoupper(Str::random(6));
 
         $user = DB::select('SELECT `name`, `role` FROM users WHERE email = \''.$request->email.'\'');
-
+        
+        if(!$user){
+            Session::flash('message', 'Link already sended to your email. Please check your email to reset your password');
+            return redirect('forgotpassword');
+        }
+        
         $details = [
             'name' => $user[0]->name,
             'datetime' => date('Y-m-d H:i:s'),
@@ -42,7 +47,7 @@ class ForgetPasswordController extends Controller
         Mail::to($request->email)->send(new OTPSend($details));
         echo $str;
 
-        Session::flash('message', 'Link already sended to your email. Please check your email to reset your password');
+        
         return redirect('forgotpassword');
     }
 
