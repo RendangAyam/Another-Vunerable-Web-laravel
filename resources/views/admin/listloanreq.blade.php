@@ -120,21 +120,21 @@
                                                     <input type="hidden" name="id" value="{{$data->id}}">
                                                     <input type="hidden" name="cardnumber" value="{{$data->cardnumber}}">
                                                     <input type="hidden" name="nominal" value="{{$data->nominal}}">
-                                                    <input type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Approve" <?php if($data->status == 'Approve' || $data->status == 'Rejected' ) { ?>disabled<?php } ?> >
+                                                    <input type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Approve">
                                                 </form>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                             <form action="{{ route('admin/listloan/reject') }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="id" value="{{$data->id}}">
-                                                <input type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Reject" <?php if($data->status == 'Approve' || $data->status == 'Rejected' ) { ?>disabled<?php } ?> >
+                                                <input type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Reject">
                                             </form>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                             <form action="{{ route('admin/listloan/rejectktp') }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="cardnumber" value="{{$data->cardnumber}}">
-                                                <input  type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Reject KTP" <?php if($data->status == 'Approve' || $data->status == 'Rejected' ) { ?>disabled<?php } ?> >
+                                                <input  type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Reject KTP">
                                             </form>
                                         </td>
                                     </tr>
@@ -172,21 +172,21 @@
                                                     <input type="hidden" name="id" value="{{$data->id}}">
                                                     <input type="hidden" name="cardnumber" value="{{$data->cardnumber}}">
                                                     <input type="hidden" name="nominal" value="{{$data->nominal}}">
-                                                    <input type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Approve" <?php if($data->status == 'Approve' || $data->status == 'Rejected' ) { ?>disabled<?php } ?> >
+                                                    <input type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Approve">
                                                 </form>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                             <form action="{{ route('admin/listloan/reject') }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="id" value="{{$data->id}}">
-                                                <input type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Reject" <?php if($data->status == 'Approve' || $data->status == 'Rejected' ) { ?>disabled<?php } ?> >
+                                                <input type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Reject">
                                             </form>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                             <form action="{{ route('admin/listloan/rejectktp') }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="cardnumber" value="{{$data->cardnumber}}">
-                                                <input  type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Reject KTP" <?php if($data->status == 'Approve' || $data->status == 'Rejected' ) { ?>disabled<?php } ?> >
+                                                <input  type="submit" class="bg-transparent text-indigo-600 hover:text-indigo-900 font-bold" value="Reject KTP">
                                             </form>
                                         </td>
                                     </tr>

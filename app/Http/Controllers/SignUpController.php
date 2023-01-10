@@ -73,10 +73,11 @@ class SignUpController extends Controller
                 'active'=> 1,
                 'email_verified_at' => date('Y-m-d H:i:s'),
             ]);
-            
-            return "Verifikasi Berhasil. Akun Anda sudah aktif.";
+            Session::flash('message','Verification Success. Your Account has been activated.');
+            return redirect('login');
         }else{
-            return "Key tidak valid!";
+            Session::flash('message','Invalid Key');
+            return redirect('login');
         }
     }
 }
