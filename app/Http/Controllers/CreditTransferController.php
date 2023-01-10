@@ -26,7 +26,7 @@ class CreditTransferController extends Controller
         $card = DB::select('select * from users where cardnumber ='.$request->cardnumber);
         $val = DB::select('select * from registeredaccount where srccard = '.Auth::User()->cardnumber.'&& destcard ='.$request->cardnumber);
         if($card == NULL){
-            Session::flash('message', 'Card Number Doesn\'t Exixt');
+            Session::flash('message', 'Card Number Doesn\'t Exist');
             return redirect('credittransfer');
         }
         if($request->cardnumber == Auth::User()->cardnumber){

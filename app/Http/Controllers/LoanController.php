@@ -34,8 +34,20 @@ class LoanController extends Controller
     public function storektp( Request $request )
     {
         // dd($request);
-        $image_path = $request->file('image')->store('image', 'public');
-        // echo ($image_path);
+        // $ext = $request->file('image')->getClientOriginalExtension();
+        // if($ext != 'jpg' || $ext != 'jpeg' || $ext != 'png') {
+        //     Session::flash('message', 'Invalid File Extension');
+        //     return redirect('loan');
+        // }
+        if($request->file('image')){
+            $file= $request->file('image');
+            // dd($file);
+            $filename= $file->getClientOriginalName();
+            $file-> move(public_path('storage/image'), $filename);
+            $image_path = 'image/'.$filename;
+        }
+        // $image_path = $request->file('image')->store('image', 'public');
+        // dd($request->file('image')->getClientOriginalExtension());
         $user = User::where('email', Auth::User()->email)
         ->update([
             'ktp'=> $image_path,

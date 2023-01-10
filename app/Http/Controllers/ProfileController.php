@@ -14,7 +14,7 @@ class ProfileController extends Controller
         $card = DB::select('select * from cards where id ='.$id);
         $user = DB::select('select * from users where cardnumber ='.$id);
         if($card == NULL){
-            return view('home', ['title' => 'Home Page']);
+            return redirect('home');
         }
         // dd($card);
         return view('profile.profile', ['card'=>$card, 'user'=>$user]);

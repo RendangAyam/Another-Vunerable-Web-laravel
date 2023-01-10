@@ -69,10 +69,10 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
-        $tkn = Login::where('email', Auth::User()->email)->
-                update([
-                    'logout_at' => Carbon::now(),
-        ]);
+        // $tkn = Login::where('email', Auth::User()->email)->
+        //         update([
+        //             'logout_at' => Carbon::now(),
+        // ]);
 
         Auth::logout();
     

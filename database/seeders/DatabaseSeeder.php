@@ -136,5 +136,8 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('Adm1nQ2123!@#'),
             'active' => 1,
         ]);
+        Card::create([
+            'money' => 0,
+        ]);
     }
 }
