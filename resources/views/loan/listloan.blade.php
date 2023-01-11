@@ -5,7 +5,7 @@
 <div class="min-h-screen bg-white ">
     <div class="relative max-w-3xl mx-auto flex-col">
         <h1 class="my-2 w-full inline-flex py-3 text-2xl font-medium text-gray-900">
-            List Card Number
+            List Loan
         </h1>
         <div class="flex flex-col">
             <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
