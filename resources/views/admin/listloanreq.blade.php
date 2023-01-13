@@ -5,7 +5,7 @@
 <div class="min-h-screen bg-white ">
     <div class="relative max-w-6xl mx-auto flex-col">
         <h1 class="my-2 w-full inline-flex py-3 text-2xl font-medium text-gray-900">
-            List Card Number
+            List Loan
         </h1>
         <div class="flex flex-col">
             <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -107,7 +107,7 @@
                                             {{$data->monthlypayment}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            <a href="{{'../storage/'.$data->ktp}}">KTP</a>
+                                            <a href="{{'../src/'.$data->ktp}}">KTP</a>
                                             {{-- {{$data->ktp}} --}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -160,7 +160,7 @@
                                             {{$data->monthlypayment}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            <a href="{{'../storage/'.$data->ktp}}">KTP</a>
+                                            <a href="{{'../src/'.$data->ktp}}">KTP</a>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                             {{$data->status}}
