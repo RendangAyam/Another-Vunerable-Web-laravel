@@ -52,7 +52,7 @@
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                             <form action="{{ route('credittransfer/transfer', $data->destcard) }}" method="GET">
                                                 {{-- <input type="hidden" name="cardNum" id="cardNum" value="{{$data->destcard}}"> --}}
-                                                <button type="submit" class="text-indigo-600 hover:text-indigo-900">Transfer</button>
+                                                <button type="submit" class="text-indigo-600 hover:text-indigo-900 font-bold">Transfer</button>
                                             </form>
                                         </td>
                                     </tr>
