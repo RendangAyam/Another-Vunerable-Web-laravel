@@ -35,7 +35,8 @@ class LoanController extends Controller
     {
         // dd($request);
         // $ext = $request->file('image')->getClientOriginalExtension();
-        // if($ext != 'jpg' || $ext != 'jpeg' || $ext != 'png') {
+        // // dd($ext);
+        // if($ext != 'jpg' && $ext != 'jpeg' && $ext != 'png') {
         //     Session::flash('message', 'Invalid File Extension');
         //     return redirect('loan');
         // }
@@ -140,8 +141,8 @@ class LoanController extends Controller
 
     public function listloan( $cardnumber )
     {
-        // $list = loan::select('id','nominal','totalpayment','monthlypayment','installment','status','created_at')->where('cardnumber', $cardnumber)->get();
-        $list = DB::select('SELECT `id`,nominal,totalpayment,monthlypayment,installment,`status`,created_at FROM loans WHERE cardnumber = '.$cardnumber);
+        // $list = loan::select('id','nominal','totalpayment','monthlypayment','installment','status','created_at')->where('cardnumber', $cardnumber)->orderBy('created_at', 'desc')->get();
+        $list = DB::select('SELECT `id`,nominal,totalpayment,monthlypayment,installment,`status`,created_at FROM loans WHERE cardnumber = '.$cardnumber.' ORDER BY created_at DESC');
         // dd($list);
         return view('loan.listloan', ['list'=>$list]);
     }

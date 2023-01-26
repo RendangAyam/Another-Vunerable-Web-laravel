@@ -33,7 +33,7 @@
                             <div class="hidden lg:block lg:ml-6">
                                 <div class="flex space-x-4">
                                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                    <a href="/login" class="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">Sign In</a>
+                                    <a href="/login" class="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
                                 </div>
                             </div>
                         </div>

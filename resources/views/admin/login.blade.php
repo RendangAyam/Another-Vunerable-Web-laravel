@@ -27,7 +27,7 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <button class="bg-gray-900 hover:bg-gray-400 hover:text-black text-white font-medium py-2 px-4 rounded" type="submit">
-                            Sign In
+                            Login
                         </button>
                     </div>
                 </form>

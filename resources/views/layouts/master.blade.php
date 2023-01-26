@@ -34,7 +34,7 @@
                             <div class="hidden lg:block lg:ml-6">
                                 <div class="flex space-x-4">
                                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                    <a href="/login" class="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">Sign In</a>
+                                    <a href="/login" class="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                                 Loan
                             </a>
                             <a href="{{ route('profile', Auth::User()->cardnumber) }}" class="<?php if($_SERVER['REQUEST_URI']=='/profile/'.Auth::user()->cardnumber) {echo 'border-indigo-500 text-gray-900';} else echo 'border-transparent text-gray-500';?> hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                                <h1 class="border-transparent text-gray-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">welcome, </h1>
+                                <h1 class="border-transparent text-gray-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Welcome, </h1>
                                 <b class="border-transparent text-black-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold">{{ Auth::user()->name }}</b>
                             </a>
                             @endif

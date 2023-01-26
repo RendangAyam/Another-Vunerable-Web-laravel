@@ -18,7 +18,7 @@
                         Nominal
                     </label>
                     <div class="mt-1">
-                        {{$nominal}}
+                        Rp.{{number_format($nominal, 2, ",", ".")}}
                     </div>
                     <input type="hidden" name="nominal" value="{{$nominal}}">
                 </div>
@@ -27,7 +27,7 @@
                         Installment
                     </label>
                     <div class="mt-1">
-                        {{$installment}}
+                        {{$installment}} Month
                     </div>
                     <input type="hidden" name="installment" value="{{$installment}}">
                 </div>
@@ -36,7 +36,7 @@
                         Admin Fee
                     </label>
                     <div class="mt-1">
-                        {{$nominal*2/100}}
+                        Rp.{{number_format($nominal*2/100, 2, ",", ".")}}
                     </div>
                 </div>
                 <div>
@@ -44,7 +44,7 @@
                         Total Payment
                     </label>
                     <div class="mt-1">
-                        {{$total}}
+                        Rp.{{number_format($total, 2, ",", ".")}}
                     </div>
                     <input type="hidden" name="total" value="{{$total}}">
                 </div>
@@ -53,7 +53,7 @@
                         Monlhty Payment
                     </label>
                     <div class="mt-1">
-                        {{$monthly}}
+                        Rp.{{number_format($monthly, 2, ",", ".")}}
                     </div>
                     <input type="hidden" name="monthly" value="{{$monthly}}">
                 </div>
