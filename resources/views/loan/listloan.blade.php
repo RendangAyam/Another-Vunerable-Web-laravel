@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="min-h-screen bg-white ">
-    <div class="relative max-w-3xl mx-auto flex-col">
+    <div class="relative max-w-4xl mx-auto flex-col">
         <h1 class="my-2 w-full inline-flex py-3 text-2xl font-medium text-gray-900">
             List Loan
         </h1>
@@ -68,13 +68,13 @@
                                             {{$data->created_at}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            {{$data->nominal}}
+                                            Rp.{{number_format($data->nominal, 2, ",", ".")}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            {{$data->totalpayment}}
+                                            Rp.{{number_format($data->totalpayment, 2, ",", ".")}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            {{$data->monthlypayment}}
+                                            Rp.{{number_format($data->monthlypayment, 2, ",", ".")}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                             {{$data->status}}
@@ -90,13 +90,13 @@
                                             {{$data->created_at}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            {{$data->nominal}}
+                                            Rp.{{number_format($data->nominal, 2, ",", ".")}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            {{$data->totalpayment}}
+                                            Rp.{{number_format($data->totalpayment, 2, ",", ".")}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            {{$data->monthlypayment}}
+                                            Rp.{{number_format($data->monthlypayment, 2, ",", ".")}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                             {{$data->status}}
