@@ -98,6 +98,10 @@ class LoanController extends Controller
 
     public function createloancalcuate( Request $request )
     {
+        if(!$request->installment){
+            Session::flash('message', 'instalment must be checked');
+            return redirect('loan/create/nominal');
+        }
         $total = $request->nominal+($request->nominal*2/100);
         $monthly = number_format((float)$total/$request->installment, 2, '.', '');
         
