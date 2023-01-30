@@ -22,7 +22,7 @@ class SignUpController extends Controller
     
     public function actionsignup(Request $request)
     {   
-        $name = htmlspecialchars($request->name);
+        // $name = htmlspecialchars($request->name);
         // echo ($name);
         // dd($request);
         $email = DB::select('SELECT email FROM users WHERE email = \''.$request->email.'\'');
@@ -41,7 +41,7 @@ class SignUpController extends Controller
         $user = User::create([
             'nik' => $request->nik,
             'email' => $request->email,
-            'name' => $name,
+            'name' => $request->name,
             'role' => $request->role,
             'password' => Hash::make($request->password),
             'verify_key' => $str,
