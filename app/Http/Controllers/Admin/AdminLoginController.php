@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Mail\OTPSend;
 use App\Models\otp;
+use App\Models\User;
 use Carbon\Carbon;
 use DB;
 use Auth;
@@ -27,11 +28,22 @@ class AdminLoginController extends Controller
             'email'=>'required|email',
             'password'=>'required|string',
         ]);
-        $credentials = $request->only(['email', 'password', 'active' => 1, 'role'=>'Admin']);
-        // dd(Auth::attempt($credentials));   
+
+        $Check = User::select('active', 'role')
+                    ->where('email', $request->email)
+                    ->where('active', '1')
+                    ->where('role', 'Admin')
+                    ->exists();
+        // dd($Check);
+        if(!$Check){
+            return redirect('home');
+        }
+        $credentials = $request->only(['email', 'password']);  
+        // dd(Auth::attempt($credentials));
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('admin/listusers');
+            // dd('a');
+            return redirect('admin/listusers');
         }
         else{
             Session::flash('message', 'wrong username or password or account didn\'t active');
