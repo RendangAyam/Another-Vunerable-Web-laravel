@@ -160,7 +160,7 @@
                                             {{$data->monthlypayment}}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            <a href="{{'../src/'.$data->ktp}}">KTP</a>
+                                            <a href="{{'../storage/'.$data->ktp}}">KTP</a>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                             {{$data->status}}
