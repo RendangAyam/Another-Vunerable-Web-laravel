@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-
+<main class="flex-1 relative z-0 overflow-y-auto focus:outline-none">
 <div class="min-h-screen bg-white ">
     <div class="relative max-w-6xl mx-auto flex-col">
         <h1 class="my-2 w-full inline-flex py-3 text-2xl font-medium text-gray-900">
